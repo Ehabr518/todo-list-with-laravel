@@ -91,6 +91,7 @@ class TodoController extends Controller
         $todo->content = $request->input('content');
         $todo->due = $request->input('due');
         $todo->save();
+        return redirect('/')->with('success', 'Todo Updated successfully');
 
     }
 
